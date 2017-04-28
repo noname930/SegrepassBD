@@ -175,7 +175,8 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         /*SE PREMO IL TASTO ANNULLA*/
-        dispose(); // termina il programma
+        dispose(); //  chiude il frame del login
+        MainSegrepass.frame.dispose(); // chiude il frame principale
         
     }//GEN-LAST:event_jButton2ActionPerformed
 

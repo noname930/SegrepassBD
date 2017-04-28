@@ -22,6 +22,7 @@ public class MainSegrepass {
         // TODO code application logic here
         
        
+     
         
         login=new Login(); // creo la finestra del login
         frame = new Interfaccia_Grafica(); // creo la finestra principale
