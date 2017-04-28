@@ -50,7 +50,8 @@ public class ConnessioneDB {
       ods.setPassword(Password);
       ods.setDatabaseName(Servizio);
       
-      connection=ods.getConnection();
+      //setto l'attributo connection della classe, uguale alla connessione stabilita tratime .getconnection()
+      connection=ods.getConnection(); 
      }
     
 }

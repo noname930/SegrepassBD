@@ -90,6 +90,11 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 231, 166, -1));
 
         jButton2.setText("Annulla");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, -1));
 
         jButton1.setText("Login");
@@ -141,7 +146,12 @@ public class Login extends javax.swing.JFrame {
      try
      {
      ConnessioneDB.StartConnection();
-     System.out.println("Connessione avvenuta con successo!");
+     System.out.println("Connessione avvenuta con successo!"); // Debug
+     
+     //Una volta che la connessione è avvenuta, distruggo la finestra del login
+     dispose(); 
+     MainSegrepass.frame.setVisible(true); // e rendo visibile la finestra principale
+     
      }
      catch(SQLException e)
      {
@@ -160,6 +170,14 @@ public class Login extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        /*SE PREMO IL TASTO ANNULLA*/
+        dispose(); // termina il programma
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
